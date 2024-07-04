@@ -1,0 +1,52 @@
+.Box{
+    margin: 0 auto 100px auto;
+    display: flex;  
+  
+    align-items: center;
+  justify-content: center;
+  }
+  
+  .icon-Box{
+      /*background-color: red;*/
+      /*display: flex;  */
+      max-width: 1120px;    
+      justify-content: center;
+  
+  }
+  
+  .icon-Box-items{
+      background-color: #eceff1;
+      box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12);
+      text-align: center;
+      padding: 20px 20px 20px 20px;
+      margin: 20px 20px 20px 20px;
+      width: 600px;
+  }
+  
+  .icon-Box-items h2{
+    text-transform: uppercase;
+  }
+  
+  .icon{
+    color: green;
+    font-size: 3rem;
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .icon-Box{
+      display: flex;
+  
+    }
+  }
+  
+  @media only screen and (max-width: 1023px){
+    .Box{
+      margin:auto;
+    }
+    .icon-Box-items{
+      width: 80%;
+    }
+  }
+  

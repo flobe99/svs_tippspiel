@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.home,
+.error .sign-up {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+
+
+.sign-up {
+  height: 100vh;
+  /*background-image: url('/images/img-8.jpg');*/
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 80px;
+}
+
+
+
+
+
+.hero-container {
+  /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
+  height: 100vh;
+  width: 100%;
+  display: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+}
+
+
+@media screen and (max-width: 960px) {
+  .hero-container>h1 {
+    font-size: 70px;
+    margin-top: -150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container>h1 {
+    font-size: 35px;
+    margin-top: -100px;
+  }
+}
+
+#login-box {
+  position: relative;
+  margin: 5% auto;
+  width: 300px;
+  height: 700px;
+  background: #eceff1;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 100%;
+  height: 400px;
+}
+
+/*h1 {
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 28px;
+}*/
+
+.content {
+  background: #eceff1;
+
+  align-items: center;
+}
+
+.Map-Container {
+  width: 80%;
+  height: 70vh;
+  margin: 0 auto 0 auto;
+}
+
+.Map {
+  padding-bottom: 100px;
+}
+
+.Box {
+  margin: 0 auto 100px auto;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-Box {
+  /*background-color: red;*/
+  /*display: flex;  */
+  max-width: 1120px;
+  justify-content: center;
+
+}
+
+
+/* Style buttons */
+.btn {
+  background-color: rgb(125, 145, 165);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+
+
+
+
+/*
+    Sprüche-App Design
+  */
+
+.sprueche-container {
+  max-width: 600px;
+  background: #eceff1;
+  padding: 10px;
+  margin: 100px 0 100px 0;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+  border-radius: 10px;
+}
+
+.sprueche-container-item {
+  width: 100%;
+  height: 70px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+}
+
+.item-img {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px 0 10px;
+}
+
+.item-img-icon {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+
+
+/*
+    Kontakt Formular
+  */
+
+.kontakt {
+  background: #104E8B;
+  justify-content: center;
+  padding: 100px 10px 100px 10px;
+  margin: 0 auto 0 auto;
+  display: flex;
+  color: #fff;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.kontakt-container {
+  max-width: 900px;
+  margin: 0 auto 0 auto;
+}
+
+.kontakt-header {
+  text-align: center;
+}
+
+.kontakt-content {
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 960px) {
+  .kontakt-content {
+    display: flex;
+  }
+}
+
+.kontakt-anschrift {
+  width: 40%;
+  text-align: center;
+  align-items: center;
+  /*padding-top: 100px;*/
+  margin: 0 auto 0 auto;
+}
+
+.kontakt-anschrift-img {
+  width: 100%;
+}
+
+.kontakt-formular {
+  align-items: center;
+  /*padding-top: 100px;*/
+  justify-content: center;
+  display: flex;
+}
+
+.kontakt-form {
+  /*display: grid;
+    grid-row: 2;*/
+  grid-template-columns: 48% 48%;
+  column-gap: 4%;
+  /*justify-content: center;*/
+  /*align-items: center;*/
+}
+
+@media screen and (min-width: 420px) {
+  .kontakt-form {
+    display: grid;
+    grid-row: 2;
+  }
+
+  .kontakt-form-item-message {
+    width: 85%;
+  }
+}
+
+
+.kontakt-form-item {
+  margin: auto auto auto auto;
+}
+
+.kontakt-form-item-message {
+  margin: 0 auto 0 auto;
+}
+
+.form {
+  /*width: '100%';*/
+}
+
+.button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Social Icons */
+.datenschutz-verweis {
+  color: #fff;
+  font-size: 18px;
+  text-align: right;
+}
+
+.textfield {
+  background: white;
+  border-radius: 10px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.nextcloud-link {
+  text-decoration: none;
+}

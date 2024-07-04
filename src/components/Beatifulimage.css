@@ -1,0 +1,71 @@
+.beautifulimage{
+    /*height: 60vh;*/
+    width: 100%;
+    /*margin: 100px auto 100px auto;*/
+    display: flex;
+}
+
+.beautifulimage-text{
+    background-image: linear-gradient(to right, #104E8B , #031f3b);
+    width: 30%;
+    display: flex;
+    align-items: center;
+    z-index: 400;
+    /*justify-content: right;*/
+}
+
+.beautifulimage-text div{
+    z-index: 500;
+    position: absolute;
+    margin-left: 20%;
+}
+
+.beautifulimage-text div *{
+    color: white;
+    line-height: 7vh;
+}
+
+.beautifulimage-text div h1{
+    font-size: 10vh;
+    /*text-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12);*/
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.beautifulimage-text div h4{
+    font-size: 2vh;
+}
+
+.beautifulimage-img{
+    width: 70%;
+    z-index: 300;
+}
+.beautifulimage-img img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1100px){
+    .beautifulimage{
+        height: auto;
+    }
+    .beautifulimage-text{
+        width: 0%;
+        align-items: flex-end;
+    }
+    .beautifulimage-img{
+        width: 1000%;
+        z-index: 300;
+    }
+    .beautifulimage-text div{
+        color: #104E8B;
+        margin-left: 2%;
+    }
+
+    .beautifulimage-text div h1{
+        font-size: 3rem!important;
+    }
+    .beautifulimage-img img{
+        width: 100%;
+        /*height: 100%;*/
+    }
+}
