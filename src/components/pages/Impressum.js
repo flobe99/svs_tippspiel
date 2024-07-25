@@ -17,10 +17,10 @@ class Impressum extends Component {
             <div className='content'>
                 <div>
                     <TextContainer title="Kontakt">
-                        <p>Florian Betz</p>
-                        <p>Kleines Eschle 24</p>
-                        <p>88471 Baustetten</p>
-                        <p>Email: florian@betz-group.de</p>
+                        <p>Florian Stöferle</p>
+                        <p>Kreppachstr. 14</p>
+                        <p>88471 Untersulmetingen</p>
+                        <p>Email: flo.stoeferle@gmail.com</p>
                     </TextContainer>
                 </div>
                 <div>
@@ -31,7 +31,7 @@ class Impressum extends Component {
                             durch die Nutzung fehlerhafter und unvollständiger Informationen verursacht wurden sind grundsätzlich ausgeschlossen, sofern seitens des Autors kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt.
                             Alle Angebote sind freibleibend und unverbindlich.
                             Der Autor behält es sich ausdrücklich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.
-                    </p>
+                        </p>
                         <h2>Angaben gemäß § 5 TMG"</h2>
                     </TextContainer>
                 </div>
@@ -47,7 +47,7 @@ class Impressum extends Component {
                             Diese Feststellung gilt für alle innerhalb des eigenen Internetangebotes gesetzten Links und Verweise sowie für Fremdeinträge in vom Autor eingerichteten Gästebüchern, Diskussionsforen und Mailinglisten.
                             Für illegale, fehlerhafte oder unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart dargebotener Informationen entstehen, haftet allein der Anbieter der Seite,
                             auf welche verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.
-                    </p>
+                        </p>
                     </TextContainer>
                 </div>
                 <div>
@@ -59,7 +59,7 @@ class Impressum extends Component {
                             Allein aufgrund der bloßen Nennung ist nicht der Schluß zu ziehen, dass Markenzeichen nicht durch Rechte Dritter geschützt sind!
                             Das Copyright für veröffentlichte, vom Autor selbst erstellte Objekte bleibt allein beim Autor der Seiten. Eine Vervielfältigung oder Verwendung solcher Grafiken, Tondokumente,
                             Videosequenzen und Texte in anderen elektronischen oder gedruckten Publikationen ist ohne ausdrückliche Zustimmung des Autors nicht gestattet.
-                    </p>
+                        </p>
                     </TextContainer>
                 </div>
                 <div>

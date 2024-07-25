@@ -4,17 +4,89 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Box, FormControl, Table, TableBody, TableHead, TableRow } from '@mui/material';
 import { Card, CardContent, Grid, Typography, Snackbar } from '@mui/material';
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
+import TextContainer from '../TextContainer';
 
+function formatDate(dateString) {
+    const [year, month, day] = dateString.split('-');
+    return `${day}.${month}.${year}`;
+}
 
-function Order_Form() {
+function formatClock(clockString) {
+    const [hour, minutes, seconds] = clockString.split(':');
+    return `${hour}:${minutes}`;
+}
+
+function Is_SVS(props) {
+    const obj = props.vereinname;
+    if (obj == "SV Sulmetingen") {
+        return <strong>{obj}</strong>;
+    }
+    else {
+        return obj;
+    }
+}
+
+function Order_Form({ person_data }) {
+    console.log("Tippabgabe person id: ", person_data);
+    const navigate = useNavigate();
     const [data, setData] = useState([]);
+    const [inputs, setInputs] = useState(data.map((value) => ({ spiel_id: value._id, person_id: person_data.id, heim: 0, gast: 0 })));
 
-    const handleSubmit = (event) => {
+    const [error, setError] = useState(null);
+    const [successMessage, setSuccessMessage] = useState(null);
+
+    const handleSubmit = async (event) => {
         event.preventDefault();
+
+        console.log(inputs);
+
+        try {
+            const response = await fetch('https://svs-tippspiel.de/api/saveTipps.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(inputs),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                setError(data.message);
+                setSuccessMessage(null);
+            } else {
+                setSuccessMessage(`Tipp erfolgreich gespeichert. Tipp ID: ${data.id}`);
+                setError(null);
+                console.log("Tipp erfolgreich gespeichert.");
+                navigate('/tippabgabe_feedback', { state: { inputs, person_data } });
+
+            }
+
+        } catch (error) {
+            setError('Fehler: ' + error.message);
+            setSuccessMessage(null);
+        }
+    };
+
+    const handleChange = (event, index) => {
+
+        console.log(event.target)
+        const targetname = event.target.name;
+        const value = event.target.value;
+        console.log("targetname: " + targetname);
+        console.log("value: " + value);
+        console.log("index: " + index);
+        setInputs(values => {
+            const newInputs = [...values];
+            newInputs[index] = { ...newInputs[index], [targetname]: value };
+            return newInputs;
+        });
     }
 
     const getData = () => {
-        fetch('data/partien.json'
+        fetch('https://svs-tippspiel.de/api/getSpiele.php'
+            //fetch('data/partien.json'
             , {
                 headers: {
                     'Content-Type': 'application/json',
@@ -23,12 +95,11 @@ function Order_Form() {
             }
         )
             .then(function (response) {
-                console.log(response)
                 return response.json();
             })
             .then(function (myJson) {
-                console.log(myJson);
                 setData(myJson)
+                setInputs(myJson.map((value) => ({ spiel_id: value._id, person_id: person_data.id, heim: 0, gast: 0 })));
             });
     }
 
@@ -41,76 +112,68 @@ function Order_Form() {
         <Box sx={{ width: 1 }} textAlign='center' justifyContent="center" alignContent={"center"}>
             <form onSubmit={handleSubmit}>
                 <FormControl fullWidth sx={{ maxWidth: "500px", margin: '20px 0px 20px 0px' }}>
+                    <h1 textAlign="center">Tippabgabe: {person_data.inputs.lastname}, {person_data.inputs.firstname} ({person_data.inputs.mail})</h1>
                     {data.map((dataObj, index) => {
                         return (
                             <Card style={{ margin: '10px' }} >
-                                Spieltag {index + 1}: {dataObj.Datum}
+                                <strong>Spieltag {index + 1}:  {formatDate(dataObj.Datum)}</strong>
                                 <CardContent alignItems='center'>
                                     <Grid container alignItems="center" >
                                         <Grid item sx={{ width: 140 }}>
-                                            <Typography>{dataObj.Heim}</Typography>
+                                            <Typography><Is_SVS vereinname={dataObj.Heim} /></Typography>
                                         </Grid>
-                                        <TextField sx={{ width: 40 }} keyboardType="numeric" required />
+                                        <TextField sx={{ width: 40 }} keyboardType="numeric" onChange={(event) => handleChange(event, index)} name='heim' value={inputs.heim} pattern="[0-9]*" required />
                                         <Grid item>
                                             <Typography>:</Typography>
                                         </Grid>
-                                        <TextField sx={{ width: 40 }} keyboardType="numeric" required />
-                                        <Grid item sx={{ width: 140 }}>
-                                            <Typography>{dataObj.Gast}</Typography>
+                                        <TextField sx={{ width: 40 }} keyboardType="numeric" onChange={(event) => handleChange(event, index)} name='gast' value={inputs.gast} pattern="[0-9]*" required />
+                                        <Grid item sx={{ width: 140 }} alignItems="center">
+                                            <Typography><Is_SVS vereinname={dataObj.Gast} /></Typography>
                                         </Grid>
                                     </Grid>
                                 </CardContent>
+                                <strong>Anpfiff: {formatClock(dataObj.Anpfiff)}</strong>
                             </Card>
                         );
                     })}
                     <Button type="submit" variant="contained" >Bestätigen</Button>
                 </FormControl>
             </form>
-            {/*<Table aria-label="customized table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell> Spieltag</TableCell>
-                        <TableCell align="left">Datum</TableCell>
-                        <TableCell align="center">Heim</TableCell>
-                        <TableCell align="left"></TableCell>
-                        <TableCell align="center">Gast</TableCell>
-                        <TableCell align="left">Tipp</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {data.map((dataObj, index) => {
-                        return (
-                            <>
-                                <TableRow>
-                                    <TableCell component="th" scope="row">
-                                        {index + 1}
-                                    </TableCell>
-                                    <TableCell align="left">{dataObj.Datum}</TableCell>
-                                    <TableCell align="center">{dataObj.Heim}</TableCell>
-                                    <TableCell align="center">:</TableCell>
-                                    <TableCell align="center">{dataObj.Gast} </TableCell>
-                                    <TableCell align="left">
-                                        <TextField sx={{ width: 50 }} /> : <TextField sx={{ width: 50 }} />
-                                    </TableCell>
-                                </TableRow>
-                            </>
-                        );
-                    })}
-                </TableBody>
-            </Table >*/}
-
         </Box>
     </>);
 }
 
-class Tippabgabe extends Component {
+const Tippabgabe = () => {
 
-    render() {
-        window.scrollTo(0, 0)
+    const location = useLocation();
+    const data = location.state;
+    console.log(data)
+
+    const navigate = useNavigate();
+
+    const handleClick_Anmeldung = () => navigate('/anmeldung');
+
+    if (data != null) {
+        console.log("location.id: " + data.id);
         return (
-            <Order_Form />
+            <>
+                <Order_Form person_data={data} />
+            </>
         );
     }
+
+    else {
+        return (
+            <>
+                <TextContainer title="Bitte zuerst anmelden" children={
+                    <>
+                        <Button type="submit" variant="contained" onClick={handleClick_Anmeldung}>Anmelden</Button >
+                    </>
+                } />
+            </>);
+    }
+    console.log(location);
+
 }
 
 export default Tippabgabe;

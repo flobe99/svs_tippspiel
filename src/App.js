@@ -4,10 +4,15 @@ import './App.css';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './components/pages/Home';
+import Kontakt from './components/pages/Kontakt';
+import Datenschutz from './components/pages/Datenschutz';
+import Impressum from './components/pages/Impressum';
 import NotFound from './components/pages/NotFound';
 import Footer from './components/Footer'
 import Tippabgabe from './components/pages/Tippabgabe';
 import Anmeldung from './components/pages/Anmeldung';
+import Einkaufsliste from './components/pages/Einkaufsliste';
+import Tippabgabe_Feedback from './components/pages/Tippabgabe_Feedback';
 
 class App extends Component {
 
@@ -21,6 +26,11 @@ class App extends Component {
             <Route path='/' element={<Home />} />
             <Route path='/anmeldung' element={<Anmeldung />} />
             <Route path='/tippabgabe' element={<Tippabgabe />} />
+            <Route path='/tippabgabe_feedback' element={<Tippabgabe_Feedback />} />
+            <Route path='/einkaufsliste' element={<Einkaufsliste />} />
+            <Route path='/kontakt' element={<Kontakt />} />
+            <Route path='/datenschutz' element={<Datenschutz />} />
+            <Route path='/impressum' element={<Impressum />} />
             <Route path="/404" element={<NotFound />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
