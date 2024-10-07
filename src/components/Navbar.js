@@ -41,12 +41,12 @@ function Navbar() {
                         </li>
                         <li className='nav-item'>
                             <Link to='/anmeldungaufstiegsrunde' className='nav-links' onClick={closeMobileMenu}>
-                                Anmelden
+                                Aufstiegsrunde
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/tippabgabeaufstiegsrunde' className='nav-links' onClick={closeMobileMenu}>
-                                Aufstiegsrunde
+                            <Link to='/zwischenstand' className='nav-links' onClick={closeMobileMenu}>
+                                Zwischenstand
                             </Link>
                         </li>
                     </ul>

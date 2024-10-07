@@ -49,7 +49,7 @@ function Order_Form() {
         <Box sx={{ width: 1 }} textAlign='center' >
             <form onSubmit={handleSubmit}>
                 <FormControl fullWidth sx={{ maxWidth: "400px", margin: '20px 0px 20px 0px' }} >
-                    <h1>Anmeldung</h1>
+                    <h1>Anmeldung Aufstiegsrunde</h1>
                     <TextField required id="filled-basic" label="Vorname" variant="filled" onChange={handleChange} name='firstname' value={inputs.firstname} />
                     <TextField required id="filled-basic" label="Nachname" variant="filled" onChange={handleChange} name='lastname' value={inputs.lastname} />
                     <TextField required id="filled-basic" label="E-Mail" variant="filled" onChange={handleChange} name='mail' value={inputs.mail} type='email' />
