@@ -8,7 +8,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 function Home_Content() {
 
   const navigate = useNavigate();
-  const handleClick_Anmeldung = () => navigate('/anmeldung');
+  const handleClick_Anmeldung = () => navigate('/anmeldungaufstiegsrunde');
   const handleClick_Zwischenstand = () => navigate('/zwischenstand');
 
   return (<Container >
@@ -26,28 +26,26 @@ function Home_Content() {
     />
     <br />
 
+    <TextContainer title="Anmeldung" children={
+      <div>
+        <p>Hier geht es zur Anmeldung für die Aufstiegsrunde</p>
+        <Button type="submit" variant="contained" onClick={handleClick_Anmeldung}>Anmelden</Button >
+      </div>
+    } />
+
+    <TextContainer title="Zwischenstand" children={
+      <>
+        <p>Nach der Qualifikationsrunde der Bezirksliga Ost ergibt sich folgender Zwischenstand</p>
+        <p>
+          <Button type="submit" variant="contained" onClick={handleClick_Zwischenstand}>Zwischenstand</Button >
+        </p>
+      </>
+    } />
+
     <TextContainer title="Die Teams des SVS bedanken sich bei allen Sponsoren für die zahlreichen Preise, die es zu gewinnen gibt!" />
 
     <img src="images/sponsoren.png" max-width="100vw" width="100%" />
 
-    <TextContainer title="Und so funktioniert's!" children={
-      <div>
-        <p>Hier geht es zur Anmeldung </p>
-        <Button type="submit" variant="contained" onClick={handleClick_Anmeldung}>Anmelden</Button >
-        <br />
-        <br />
-        <ul>
-          <li>Alle Tipps kosten dich in Summe 30 € und sind bei deinem Tipppaten oder per Paypal über <strong>sv-sulmetingen@web.de</strong> zu bezahlen.</li>
-          <img src="images/paypal_qr.png" max-width="0.5vw" width="50%" />
-          <li>Vor dem ersten Spieltag unserer 1. Mannschaft ist die gesamte Qualifikationsrunde der Bezirksliga Ost auf das richtige Ergebnis zu tippen.</li>
-          <li>Zusätzlich zu den Spielen wird die Endplatzierungen der 1. Mannschaft in der Qualifikationsrunde getippt, sowie die Endplatzierung der 2. Mannschaft in der Kreisliga A.</li>
-          <li>Sobald die Staffelzusammensetzung der Auf- bzw. Abstiegsrunde der Bezirksliga Oberschwaben feststeht, müssen die Ergebnisse dieser Runde ebenso getippt werden.</li>
-          <li>Hierzu werden die Tipper nochmals informiert und können die Ergebnisse für die Auf- bzw. Abstiegsrunde eingeben.</li>
-          <li>Am Ende der Saison werden die Ergebnisse aus beiden Runden zu einem Gesamtergebnis zusammengerechnet.</li>
-          <li>Bei Punktgleichheit und gleicher Anzahl der richtigen Ergebnisse am Ende der Saison entscheidet das Los.</li>
-        </ul>
-      </div>
-    } />
 
     <TextContainer title="Tippspiel Preise!" children={
       <ol>
@@ -72,15 +70,6 @@ function Home_Content() {
         <li> 20€ Gutschein Bäckerei Mast</li>
         <li> Wurstkorb von der Landschlächterei Angele</li>
       </ol>
-    } />
-
-    <TextContainer title="Zwischenstand" children={
-      <>
-        <p>Nach der Qualifikationsrunde der Bezirksliga Ost ergibt sich folgender Zwischenstand der Tipper</p>
-        <p>
-          <Button type="submit" variant="contained" onClick={handleClick_Zwischenstand}>Zwischenstand</Button >
-        </p>
-      </>
     } />
 
     <TextContainer title="Preisvergabe" children={

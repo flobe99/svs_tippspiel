@@ -29,12 +29,12 @@ class App extends Component {
           <Navbar />
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/anmeldung' element={<Anmeldung />} />
+            {/*<Route path='/anmeldung' element={<Anmeldung />} />*/}
             <Route path='/anmeldungaufstiegsrunde' element={<AnmeldungAufstiegsrunde />} />
             <Route path='/tippabgabeaufstiegsrunde' element={<Tippabgabe_Aufstiegsrunde />} />
-            <Route path='/tippabgabe' element={<Tippabgabe />} />
+            {/*<Route path='/tippabgabe' element={<Tippabgabe />} />*/}
             <Route path='/tippabgabe_endplazierungaufstiegsrunde' element={<Tippabgabe_EndplazierungAufstiegsrunde />} />
-            <Route path='/tippabgabe_endplazierung' element={<Tippabgabe_Endplazierung />} />
+            {/*<Route path='/tippabgabe_endplazierung' element={<Tippabgabe_Endplazierung />} />*/}
             <Route path='/tippabgabe_feedback' element={<Tippabgabe_Feedback />} />
             <Route path='/zwischenstand' element={<Zwischenstand />} />
             <Route path='/einkaufsliste' element={<Einkaufsliste />} />

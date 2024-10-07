@@ -131,7 +131,7 @@ const Tippabgabe_EndplazierungAufstiegsrunde = () => {
 
     const navigate = useNavigate();
 
-    const handleClick_Anmeldung = () => navigate('/anmeldung');
+    const handleClick_Anmeldung = () => navigate('/anmeldungaufstiegsrunde');
 
     if (data != null) {
         console.log("location.id: " + data.person_data.id);
