@@ -17,6 +17,7 @@ import Tippabgabe_Endplazierung from './components/pages/Tippabgabe_Endplazierun
 import Tippabgabe_Aufstiegsrunde from './components/pages/Tippabgabe_Aufstiegsrunde';
 import AnmeldungAufstiegsrunde from './components/pages/Anmeldung_Aufstiegsrunde';
 import Tippabgabe_EndplazierungAufstiegsrunde from './components/pages/Tippabgabe_EndplazierungAufstiegsrunde';
+import Zwischenstand from './components/pages/Zwischenstand';
 
 class App extends Component {
 
@@ -35,6 +36,7 @@ class App extends Component {
             <Route path='/tippabgabe_endplazierungaufstiegsrunde' element={<Tippabgabe_EndplazierungAufstiegsrunde />} />
             <Route path='/tippabgabe_endplazierung' element={<Tippabgabe_Endplazierung />} />
             <Route path='/tippabgabe_feedback' element={<Tippabgabe_Feedback />} />
+            <Route path='/zwischenstand' element={<Zwischenstand />} />
             <Route path='/einkaufsliste' element={<Einkaufsliste />} />
             <Route path='/kontakt' element={<Kontakt />} />
             <Route path='/datenschutz' element={<Datenschutz />} />

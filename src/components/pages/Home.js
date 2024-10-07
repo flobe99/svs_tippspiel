@@ -9,6 +9,7 @@ function Home_Content() {
 
   const navigate = useNavigate();
   const handleClick_Anmeldung = () => navigate('/anmeldung');
+  const handleClick_Zwischenstand = () => navigate('/zwischenstand');
 
   return (<Container >
     <Box >
@@ -24,10 +25,6 @@ function Home_Content() {
       }}
     />
     <br />
-
-    <TextContainer title="Weißwurstfrühstück 2024" children={<h1>
-      Die Siegerehrung des Tippspiels der Saison 23/24 findet am <strong> 11.08.2024</strong> um <strong>10 Uhr</strong> statt.
-    </h1>} />
 
     <TextContainer title="Die Teams des SVS bedanken sich bei allen Sponsoren für die zahlreichen Preise, die es zu gewinnen gibt!" />
 
@@ -77,8 +74,14 @@ function Home_Content() {
       </ol>
     } />
 
-
-
+    <TextContainer title="Zwischenstand" children={
+      <>
+        <p>Nach der Qualifikationsrunde der Bezirksliga Ost ergibt sich folgender Zwischenstand der Tipper</p>
+        <p>
+          <Button type="submit" variant="contained" onClick={handleClick_Zwischenstand}>Zwischenstand</Button >
+        </p>
+      </>
+    } />
 
     <TextContainer title="Preisvergabe" children={
       <p>
