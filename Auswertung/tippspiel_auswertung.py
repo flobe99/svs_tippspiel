@@ -40,9 +40,12 @@ def update_punkte(person_id, new_punkte):
     
 import sqlite3
 import pandas as pd
+import os
+path = os.path.join(os.getcwd(),"24_25_Tippspiel.db")
 
 # Verbindung zur SQLite-Datenbank herstellen
-conn = sqlite3.connect(r"C:\Users\flost\OneDrive\4_Privat\2_Sport\Fussball\24_25_Tippspiel.db")#r'C:\Users\FS\OneDrive\4_Privat\2_Sport\Fussball\24_25_Tippspiel.db")  # ersetze 'datenbank.db' durch den Pfad zu deiner SQLite-Datei
+#conn = sqlite3.connect(r"C:\Users\flost\OneDrive\4_Privat\2_Sport\Fussball\24_25_Tippspiel.db")#r'C:\Users\FS\OneDrive\4_Privat\2_Sport\Fussball\24_25_Tippspiel.db")  # ersetze 'datenbank.db' durch den Pfad zu deiner SQLite-Datei
+conn = sqlite3.connect(path)
 
 # SQL-Abfrage ausführen und alle Einträge abrufen
 query = "SELECT * FROM Tipps1"
