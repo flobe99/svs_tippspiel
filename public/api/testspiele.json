@@ -1,0 +1,146 @@
+[
+    {
+        "_id": 0,
+        "Datum": "2024-10-13",
+        "Anpfiff": "15:00:00",
+        "Heim": "SGM SC Bl\u00f6nried\/\u200bSV Ebersbach",
+        "Gast": "SV Sulmetingen",
+        "Tore_Heim": 0,
+        "Tore_Gast": 0
+    },
+    {
+        "_id": 1,
+        "Datum": "2024-10-27",
+        "Anpfiff": "15:00:00",
+        "Heim": "SV Sulmetingen",
+        "Gast": "FC 1911 Krauchenwies\/\u200bHausen a.A.\/\u200bG\u00f6ggingen",
+        "Tore_Heim": 0,
+        "Tore_Gast": 0
+    },
+    {
+        "_id": 2,
+        "Datum": "2024-11-03",
+        "Anpfiff": "14:30:00",
+        "Heim": "SGM Ringschnait\/\u200bMittelbuch",
+        "Gast": "SV Sulmetingen",
+        "Tore_Heim": 0,
+        "Tore_Gast": 0
+    },
+    {
+        "_id": 3,
+        "Datum": "2024-11-10",
+        "Anpfiff": "14:30:00",
+        "Heim": "SV Sulmetingen",
+        "Gast": "SV Sigmaringen",
+        "Tore_Heim": 0,
+        "Tore_Gast": 0
+    },
+    {
+        "_id": 4,
+        "Datum": "2024-11-17",
+        "Anpfiff": "14:30:00",
+        "Heim": "FV Bad Schussenried",
+        "Gast": "SV Sulmetingen",
+        "Tore_Heim": 0,
+        "Tore_Gast": 0
+    },
+    {
+        "_id": 5,
+        "Datum": "2024-11-24",
+        "Anpfiff": "14:30:00",
+        "Heim": "SV Sulmetingen",
+        "Gast": "SV Steinhausen-Rottum",
+        "Tore_Heim": 0,
+        "Tore_Gast": 0
+    },
+    {
+        "_id": 6,
+        "Datum": "2025-03-23",
+        "Anpfiff": "15:00:00",
+        "Heim": " SV Uttenweiler",
+        "Gast": "SV Sulmetingen",
+        "Tore_Heim": 0,
+        "Tore_Gast": 0
+    },
+    {
+        "_id": 7,
+        "Datum": "2025-03-30",
+        "Anpfiff": "14:30:00",
+        "Heim": "SV Sulmetingen",
+        "Gast": "SGM Ummendorf\/\u200bFischbach",
+        "Tore_Heim": 0,
+        "Tore_Gast": 0
+    },
+    {
+        "_id": 8,
+        "Datum": "2025-04-05",
+        "Anpfiff": "15:30:00",
+        "Heim": " SV Sigmaringen",
+        "Gast": "SV Sulmetingen",
+        "Tore_Heim": 0,
+        "Tore_Gast": 0
+    },
+    {
+        "_id": 9,
+        "Datum": "2025-04-13",
+        "Anpfiff": "15:00:00",
+        "Heim": "SV Sulmetingen",
+        "Gast": "FV Bad Schussenried",
+        "Tore_Heim": 0,
+        "Tore_Gast": 0
+    },
+    {
+        "_id": 10,
+        "Datum": "2025-04-27",
+        "Anpfiff": "15:00:00",
+        "Heim": "SV Steinhausen-Rottum",
+        "Gast": "SV Sulmetingen",
+        "Tore_Heim": 0,
+        "Tore_Gast": 0
+    },
+    {
+        "_id": 11,
+        "Datum": "2025-05-04",
+        "Anpfiff": "15:00:00",
+        "Heim": "SV Sulmetingen",
+        "Gast": "SV Uttenweiler",
+        "Tore_Heim": 0,
+        "Tore_Gast": 0
+    },
+    {
+        "_id": 12,
+        "Datum": "2025-05-11",
+        "Anpfiff": "15:00:00",
+        "Heim": "SGM Ummendorf\/\u200bFischbach",
+        "Gast": "SV Sulmetingen",
+        "Tore_Heim": 0,
+        "Tore_Gast": 0
+    },
+    {
+        "_id": 13,
+        "Datum": "2025-05-18",
+        "Anpfiff": "15:00:00",
+        "Heim": "SV Sulmetingen",
+        "Gast": "SGM SC Bl\u00f6nried\/\u200bSV Ebersbach",
+        "Tore_Heim": 0,
+        "Tore_Gast": 0
+    },
+    {
+        "_id": 14,
+        "Datum": "2025-06-01",
+        "Anpfiff": "15:00:00",
+        "Heim": "FC 1911 Krauchenwies\/\u200bHausen a.A.\/\u200bG\u00f6ggingen",
+        "Gast": "SV Sulmetingen",
+        "Tore_Heim": 0,
+        "Tore_Gast": 0
+    },
+    {
+        "_id": 15,
+        "Datum": "2025-06-07",
+        "Anpfiff": "15:00:00",
+        "Heim": "SV Sulmetingen",
+        "Gast": "SGM Ringschnait\/\u200bMittelbuch",
+        "Tore_Heim": 0,
+        "Tore_Gast": 0
+    }
+]

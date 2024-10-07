@@ -25,9 +25,9 @@ function Home_Content() {
     />
     <br />
 
-    <TextContainer title="Weißwurstfrühstück 2024" children={<div>
-      Die Siegerehrung des Tippspiels der Saison 23/24 findet am <strong> 11.08.2024</strong> <strong>um 10 Uhr</strong> statt.
-    </div>} />
+    <TextContainer title="Weißwurstfrühstück 2024" children={<h1>
+      Die Siegerehrung des Tippspiels der Saison 23/24 findet am <strong> 11.08.2024</strong> um <strong>10 Uhr</strong> statt.
+    </h1>} />
 
     <TextContainer title="Die Teams des SVS bedanken sich bei allen Sponsoren für die zahlreichen Preise, die es zu gewinnen gibt!" />
 
@@ -40,7 +40,8 @@ function Home_Content() {
         <br />
         <br />
         <ul>
-          <li>Alle Tipps kosten dich in Summe 30 € und sind bei deinem Tipppaten zu bezahlen.</li>
+          <li>Alle Tipps kosten dich in Summe 30 € und sind bei deinem Tipppaten oder per Paypal über <strong>sv-sulmetingen@web.de</strong> zu bezahlen.</li>
+          <img src="images/paypal_qr.png" max-width="0.5vw" width="50%" />
           <li>Vor dem ersten Spieltag unserer 1. Mannschaft ist die gesamte Qualifikationsrunde der Bezirksliga Ost auf das richtige Ergebnis zu tippen.</li>
           <li>Zusätzlich zu den Spielen wird die Endplatzierungen der 1. Mannschaft in der Qualifikationsrunde getippt, sowie die Endplatzierung der 2. Mannschaft in der Kreisliga A.</li>
           <li>Sobald die Staffelzusammensetzung der Auf- bzw. Abstiegsrunde der Bezirksliga Oberschwaben feststeht, müssen die Ergebnisse dieser Runde ebenso getippt werden.</li>
@@ -53,16 +54,16 @@ function Home_Content() {
 
     <TextContainer title="Tippspiel Preise!" children={
       <ol>
-        <li>2 VIP-Karten für ein Heimspiel des FC Bayern München</li>
-        <li>Spanferkel für ca. 25 Personen vom Hofladen Henle</li>
+        <li> 2 VIP-Karten für ein Heimspiel des FC Bayern München</li>
+        <li> Spanferkel für ca. 25 Personen vom Hofladen Henle</li>
         <li> 2x VIP-Karten für ein Heimspiel des SSV Ulm</li>
         <li> 100 € Tankgutschein</li>
-        <li> Rundflug für eine Person</li>
         <li> 100 € Gutschein für ein Fliegengitter der Firma Blersch</li>
         <li> 100 € Gutschein für Gartentechnik RADI</li>
-        <li> Dauerkarte SVS + 1x Getränk + 1x rote Wurst für jedes Heimspiel 2023/2024</li>
+        <li> Gutschein für 8x Autowaschen</li>
+        <li> Dauerkarte SVS + 1x Getränk + 1x rote Wurst für jedes Heimspiel 2024/2025</li>
         <li> 50 € OsUs Gutschein</li>
-        <li> Dauerkarte für alle Heimspiele des SVS in der Saison 2023/2024</li>
+        <li> Dauerkarte für alle Heimspiele des SVS in der Saison 2024/2025</li>
         <li> 40€ Gutschein Harry‘s Sport Shop</li>
         <li> 40€ Gutschein Harry‘s Sport Shop</li>
         <li> 40 € Gutschein vom Früchtehandel Russ</li>

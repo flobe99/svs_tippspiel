@@ -13,6 +13,10 @@ import Tippabgabe from './components/pages/Tippabgabe';
 import Anmeldung from './components/pages/Anmeldung';
 import Einkaufsliste from './components/pages/Einkaufsliste';
 import Tippabgabe_Feedback from './components/pages/Tippabgabe_Feedback';
+import Tippabgabe_Endplazierung from './components/pages/Tippabgabe_Endplazierung';
+import Tippabgabe_Aufstiegsrunde from './components/pages/Tippabgabe_Aufstiegsrunde';
+import AnmeldungAufstiegsrunde from './components/pages/Anmeldung_Aufstiegsrunde';
+import Tippabgabe_EndplazierungAufstiegsrunde from './components/pages/Tippabgabe_EndplazierungAufstiegsrunde';
 
 class App extends Component {
 
@@ -25,7 +29,11 @@ class App extends Component {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/anmeldung' element={<Anmeldung />} />
+            <Route path='/anmeldungaufstiegsrunde' element={<AnmeldungAufstiegsrunde />} />
+            <Route path='/tippabgabeaufstiegsrunde' element={<Tippabgabe_Aufstiegsrunde />} />
             <Route path='/tippabgabe' element={<Tippabgabe />} />
+            <Route path='/tippabgabe_endplazierungaufstiegsrunde' element={<Tippabgabe_EndplazierungAufstiegsrunde />} />
+            <Route path='/tippabgabe_endplazierung' element={<Tippabgabe_Endplazierung />} />
             <Route path='/tippabgabe_feedback' element={<Tippabgabe_Feedback />} />
             <Route path='/einkaufsliste' element={<Einkaufsliste />} />
             <Route path='/kontakt' element={<Kontakt />} />
