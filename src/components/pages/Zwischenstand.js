@@ -35,28 +35,33 @@ class Zwischenstand extends Component {
     render() {
         window.scrollTo(0, 0)
         return (
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <Table style={{ width: '80%', maxWidth: '600px' }}>
-                    <TableHead>
-                        <TableRow>
-                            <TableCell> <strong>Platz</strong></TableCell>
-                            <TableCell><strong>Vorname</strong></TableCell>
-                            <TableCell><strong>Name</strong></TableCell>
-                            <TableCell><strong>Punkte</strong></TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {this.state.data.map((row, index) => (
-                            <TableRow key={index}>
-                                <TableCell>{row.platz}.</TableCell>
-                                <TableCell>{row.vorname}</TableCell>
-                                <TableCell>{row.name}</TableCell>
-                                <TableCell>{row.punkte}</TableCell>
+            <>
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <h1>Zwischenstand Top 20</h1>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <Table style={{ width: '80%', maxWidth: '600px' }}>
+                        <TableHead>
+                            <TableRow>
+                                <TableCell> <strong>Platz</strong></TableCell>
+                                <TableCell><strong>Vorname</strong></TableCell>
+                                <TableCell><strong>Name</strong></TableCell>
+                                <TableCell><strong>Punkte</strong></TableCell>
                             </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </div >
+                        </TableHead>
+                        <TableBody>
+                            {this.state.data.map((row, index) => (
+                                <TableRow key={index}>
+                                    <TableCell>{row.platz}.</TableCell>
+                                    <TableCell>{row.vorname}</TableCell>
+                                    <TableCell>{row.name}</TableCell>
+                                    <TableCell>{row.punkte}</TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </div >
+            </>
         );
     }
 }

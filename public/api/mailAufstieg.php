@@ -25,7 +25,7 @@ $message = "Danke " . $data['person_data']['firstname'] . " " . $data['person_da
            "Deine Tipps wurden erfolgreich gespeichert:\n\n" .
            "Du hast folgende Tipps abgegeben:\n" .
            $matches .
-           "\nEndplazierung 1. Mannschaft Aufstiegsrunde: " . $data['endplazierung']['Endplazierung_1'] . "\n" .
+           "\nEndplazierung 1. Mannschaft Aufstiegsrunde: " . $data['endplazierung']['Endplazierung_1_Aufstieg'];
 
 
 // Set the email headers with proper character encoding

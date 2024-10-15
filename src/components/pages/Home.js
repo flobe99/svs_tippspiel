@@ -33,7 +33,7 @@ function Home_Content() {
       </div>
     } />
 
-    <TextContainer title="Zwischenstand" children={
+    <TextContainer title="Zwischenstand Top 20" children={
       <>
         <p>Nach der Qualifikationsrunde der Bezirksliga Ost ergibt sich folgender Zwischenstand</p>
         <p>
