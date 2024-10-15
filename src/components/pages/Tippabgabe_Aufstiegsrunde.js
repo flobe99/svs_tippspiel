@@ -2,7 +2,7 @@ import React, { Component, useEffect, useState } from 'react';
 import '../../App.css';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { Box, FormControl, Table, TableBody, TableHead, TableRow } from '@mui/material';
+import { Box, FormControl, InputLabel, MenuItem, Select, Table, TableBody, TableHead, TableRow } from '@mui/material';
 import { Card, CardContent, Grid, Typography, Snackbar } from '@mui/material';
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import TextContainer from '../TextContainer';
@@ -39,10 +39,11 @@ function Order_Form({ person_data }) {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        console.log("Testinputs" + inputs);
+        console.log(inputs);
+        navigate('/tippabgabe_endplazierungaufstiegsrunde', { state: { inputs, person_data } });
 
         try {
-            const response = await fetch('https://svs-tippspiel.de/api/saveTipps.php', {
+            const response = await fetch('https://svs-tippspiel.de/api/saveTippsAufstieg.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -59,7 +60,7 @@ function Order_Form({ person_data }) {
                 setSuccessMessage(`Tipp erfolgreich gespeichert. Tipp ID: ${data.id}`);
                 setError(null);
                 console.log("Tipp erfolgreich gespeichert.");
-                navigate('/tippabgabe_endplazierung', { state: { inputs, person_data } });
+                navigate('/tippabgabe_endplazierungaufstiegsrunde', { state: { inputs, person_data } });
             }
 
         } catch (error) {
@@ -84,8 +85,7 @@ function Order_Form({ person_data }) {
     }
 
     const getData = () => {
-        fetch('https://svs-tippspiel.de/api/getSpiele.php'
-            //fetch('data/partien.json'
+        fetch('https://svs-tippspiel.de/api/getSpieleAufstieg.php'
             , {
                 headers: {
                     'Content-Type': 'application/json',
@@ -99,6 +99,7 @@ function Order_Form({ person_data }) {
             .then(function (myJson) {
                 setData(myJson)
                 setInputs(myJson.map((value) => ({ spiel_id: value._id, person_id: person_data.id, heim: 0, gast: 0 })));
+                console.log("inputs" + inputs)
             });
     }
 
@@ -142,15 +143,14 @@ function Order_Form({ person_data }) {
     </>);
 }
 
-const Tippabgabe = () => {
+const Tippabgabe_Aufstiegsrunde = () => {
 
     const location = useLocation();
     const data = location.state;
-    console.log(data)
 
     const navigate = useNavigate();
 
-    const handleClick_Anmeldung = () => navigate('/anmeldung');
+    const handleClick_Anmeldung = () => navigate('/anmeldungaufstiegsrunde');
 
     if (data != null) {
         console.log("location.id: " + data.id);
@@ -171,8 +171,6 @@ const Tippabgabe = () => {
                 } />
             </>);
     }
-    console.log(location);
-
 }
 
-export default Tippabgabe;
+export default Tippabgabe_Aufstiegsrunde;

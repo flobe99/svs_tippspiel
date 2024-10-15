@@ -20,10 +20,7 @@ const Tippabgabe_Feedback = () => {
             <TextContainer title="Tipp erfolgreich gespeichert" children={
                 <>
                     <Typography>
-                        Danke {data.person_data.inputs.firstname + " " + data.person_data.inputs.lastname + " für die Teilnahme am Tippspiel. Deine " + data.inputs.length + " Tipps wurden erfolgreich gespeichert."}
-                    </Typography>
-                    <Typography>
-                        Dein Tipppate {data.person_data.inputs.tipp_pate} wird sich bei dir melden.
+                        Danke {data.person_data.inputs.firstname + " " + data.person_data.inputs.lastname + " für die Teilnahme am Tippspiel. Deine Tipps wurden erfolgreich gespeichert."}
                     </Typography>
                     <Button type="submit" variant="contained" onClick={handleClick_Home}>Startseite</Button >
                 </>

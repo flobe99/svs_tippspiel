@@ -40,13 +40,13 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/anmeldung' className='nav-links' onClick={closeMobileMenu}>
-                                Anmelden
+                            <Link to='/anmeldungaufstiegsrunde' className='nav-links' onClick={closeMobileMenu}>
+                                Aufstiegsrunde
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/tippabgabe' className='nav-links' onClick={closeMobileMenu}>
-                                Tippabgabe
+                            <Link to='/zwischenstand' className='nav-links' onClick={closeMobileMenu}>
+                                Zwischenstand
                             </Link>
                         </li>
                     </ul>

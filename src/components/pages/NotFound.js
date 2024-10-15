@@ -12,7 +12,6 @@ class NotFound extends Component {
                 title="Error, page not found"
                 imgpath="images/Error.jpg"
             />
-            <Cards />
         </div>;
     }
 }
